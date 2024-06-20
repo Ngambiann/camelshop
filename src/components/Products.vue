@@ -1,26 +1,25 @@
 <template>
     <h1>Confectionery</h1>
     <div>
-
-        <v-row>
-        <v-col cols="12" md="3"  v-for="product in stockDetails" :key=product>
-       
-     
-        <v-card class="mx-auto my-12" max-width="374">
-    <v-img height="250" src="product.itemImage" cover></v-img>
+     <v-row>
+        <v-col cols="12" md="5"  v-for="product in stockDetails" :key=product>
+           <v-card
+         class="mx-auto my-12" 
+        max-width="374"
+        >
+    <v-img 
+    height="250" 
+    :src="product.itemImage"
+     cover
+     ></v-img>
 
     <v-card-item>
-      <v-card-title>{{Products.itemName}}</v-card-title>
+      <v-card-title>{{product.itemName}}</v-card-title>
     </v-card-item>
 
     <v-card-text>
-      <div class="my-4 text-subtitle-1">
-        {{product.itemPrice}}
-      </div>
-
-      <div>
-        {{ product.description }}
-      </div>
+      <div class="my-4 text-subtitle-1"> {{product.itemPrice}} </div>
+      <div> {{ product.description }} </div>
     </v-card-text>
 
     <v-divider class="mx-4 mb-1"></v-divider>
@@ -37,7 +36,7 @@
 </v-row>
     </div>
     </template>
-    
+
     <script>
     export default {
     data(){
@@ -91,7 +90,7 @@
                 itemQuantity:43,
                 itemImage:'.../images/alexander-grey-SGI0i5sHCL8-unsplash.jpg',
                 description:'tangy flavoured goodness'
-            },
+            },            
             {
               itemNumber:7,
                 itemName:"Gummy bears",
@@ -123,14 +122,12 @@
                 itemQuantity:78,
                 itemImage:'.../images/towfiqu-barbhuiya-33taMhUiF0I-unsplash.jpg',
                 description:'different fruit flavours'
-            }
-            
-          ]
-            }
-    
+            } 
+        ],
         }
-    }
-    methods() ;{
+     },
+    methods(){
 
     }
+  }
     </script>
