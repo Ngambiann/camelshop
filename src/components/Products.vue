@@ -88,7 +88,7 @@
                 itemName:"Gummy worms",
                 itemPrice:110,
                 itemQuantity:43,
-                itemImage:'.../images/alexander-grey-SGI0i5sHCL8-unsplash.jpg',
+                itemImage:'public/images/alexander-grey-SGI0i5sHCL8-unsplash.jpg',
                 description:'tangy flavoured goodness'
             },            
             {
@@ -96,7 +96,7 @@
                 itemName:"Gummy bears",
                 itemPrice:110,
                 itemQuantity:56,
-                itemImage:'.../images/amit-lahav-LU_fCezP9-o-unsplash.jpg',
+                itemImage:'public/images/amit-lahav-LU_fCezP9-o-unsplash.jpg',
                 description:'mixed fruit asortment'
             },
             {
@@ -104,7 +104,7 @@
                 itemName:"Jelly Beans",
                 itemPrice:90,
                 itemQuantity:68,
-                itemImage:'.../images/billow926-dSpN8Zi5BIg-unsplash.jpg',
+                itemImage:'public/images/billow926-dSpN8Zi5BIg-unsplash.jpg',
                 description:'nice and chewy'
             },
             {
@@ -112,7 +112,7 @@
                 itemName:"Cupcakes",
                 itemPrice:65,
                 itemQuantity:36,
-                itemImage:'.../images/lore-schodts-FIxdY7jOBus-unsplash.jpg',
+                itemImage:'public/images/lore-schodts-FIxdY7jOBus-unsplash.jpg',
                 description:'very spongy and well iced greatness'
             },
             {
@@ -120,7 +120,7 @@
                 itemName:"Fruit candy",
                 itemPrice:75,
                 itemQuantity:78,
-                itemImage:'.../images/towfiqu-barbhuiya-33taMhUiF0I-unsplash.jpg',
+                itemImage:'public/images/towfiqu-barbhuiya-33taMhUiF0I-unsplash.jpg',
                 description:'different fruit flavours'
             } 
         ],
