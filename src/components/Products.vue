@@ -1,56 +1,10 @@
 <template>
     <h1>Confectionery</h1>
     <p>{{ total }}</p>
-    <v-card
-      class="mx-auto"
-      width="800">
-      <v-card-text class="bg-surface-light pt-4"> </v-card-text>
-        <v-card-title>Cart 
-          {{ total }}
-          <v-btn color="deep-orange-lighten-1"
-          text="Checkout"
-          ></v-btn>
-       
-        <v-row>
-        <v-col cols="12" md="5"  v-for="product in cartItems" :key=product>
-           <v-card
-         class="mx-auto my-12" 
-        max-width="374"
-        >
-    <v-img 
-    height="250" 
-    :src="product.itemImage"
-     cover
-     ></v-img>
-
-    <v-card-item>
-      <v-card-title>{{product.itemName}}</v-card-title>
-    </v-card-item>
-
-    <v-card-text>
-      <div class="my-4 text-subtitle-1"> {{product.itemPrice}} </div>
-      <div> {{ product.description }} </div>
-    </v-card-text>
-
-    <v-divider class="mx-4 mb-1"></v-divider>
-    <v-card-actions>
-      <v-btn
-        color="deep-purple-lighten-2"
-        text="Remove"
-        block
-        border
-        @click="RemovefromCart(product)"
-      ></v-btn>
-    </v-card-actions>
-  </v-card>
-</v-col>
-</v-row>
-      </v-card-title>
-      </v-card>
- 
+   
     <div>
      <v-row>
-        <v-col cols="12" md="5"  v-for="product in stockDetails" :key=product>
+        <v-col cols="12" md="5"  v-for="product in stock" :key=product>
            <v-card
          class="mx-auto my-12" 
         max-width="374"
@@ -88,6 +42,8 @@
     </template>
 
     <script>
+    import { mapActions,mapGetters } from 'vuex'
+
     export default {
     data(){
         return{
@@ -147,7 +103,7 @@
                 itemName:"Gummy bears",
                 itemPrice:110,
                 itemQuantity:56,
-                itemImage:'public/images/amit-lahav-LU_fCezP9-o-unsplash.jpg',
+                itemImage:'/images/amit-lahav-LU_fCezP9-o-unsplash.jpg',
                 description:'mixed fruit asortment'
             },
             {
@@ -155,7 +111,7 @@
                 itemName:"Jelly Beans",
                 itemPrice:90,
                 itemQuantity:68,
-                itemImage:'public/images/billow926-dSpN8Zi5BIg-unsplash.jpg',
+                itemImage:'/images/billow926-dSpN8Zi5BIg-unsplash.jpg',
                 description:'nice and chewy'
             },
             {
@@ -163,7 +119,7 @@
                 itemName:"Cupcakes",
                 itemPrice:65,
                 itemQuantity:36,
-                itemImage:'public/images/lore-schodts-FIxdY7jOBus-unsplash.jpg',
+                itemImage:'/images/lore-schodts-FIxdY7jOBus-unsplash.jpg',
                 description:'very spongy and well iced greatness'
             },
             {
@@ -171,7 +127,7 @@
                 itemName:"Fruit candy",
                 itemPrice:75,
                 itemQuantity:78,
-                itemImage:'public/images/towfiqu-barbhuiya-33taMhUiF0I-unsplash.jpg',
+                itemImage:'/images/towfiqu-barbhuiya-33taMhUiF0I-unsplash.jpg',
                 description:'different fruit flavours'
             } 
         ],
@@ -191,7 +147,13 @@
            RemovefromCart(product){
             this.cartItems.pop(product)
             this.total -= product.itemPrice
-           }
-    }
+           },
+           
+    },
+    computed: {
+            ...mapGetters({
+               stock: 'stock'
+            })
+           },
   }
     </script>
