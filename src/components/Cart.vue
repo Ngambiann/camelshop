@@ -63,7 +63,7 @@
 
         computed: {
             ...mapGetters({
-               cartItems: 'stock'
+               cartItems: 'cart'
             })
            },
     

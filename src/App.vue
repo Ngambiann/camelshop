@@ -6,11 +6,8 @@ import Navbar from "./components/Navbar.vue"
 
 <template>
     <v-app>
-    <Navbar></Navbar>
     <v-main>
 <RouterView></RouterView>
     </v-main>
 </v-app>
 </template>
-
-
