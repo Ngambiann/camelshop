@@ -1,5 +1,6 @@
 import {createRouter, createWebHistory} from 'vue-router'
 
+
 import Homepage from "./../components/Homepage.vue"
 import Products from "./../components/Products.vue"
 import ContactUs from "./../components/ContactUs.vue"
